@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import HomePage from './containers/HomePage'
 import ArticleContainer from './containers/ArticleContainer'
+import VideoContainer from './containers/VideoContainer'
+
 
 const App = () => {
   return (
@@ -14,7 +16,8 @@ const App = () => {
       <div className="App">
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/articles/:id' component={ArticleContainer} />
+          <Route exact path='/articles/:articleId' component={ArticleContainer} />
+          <Route exact path='/videos/:videoId' component={VideoContainer} />
         </Switch>
       </div>
     </Router>
