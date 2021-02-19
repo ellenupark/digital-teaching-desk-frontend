@@ -39,6 +39,7 @@ const VideoContainer = ({ match }) => {
                       </>
                   ))
               }
+              <h2>Resource Requirements: {data['resource_requirement'].toString()}</h2>
               <Link to="/">Back to homepage</Link>
             </>
           )}
