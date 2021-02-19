@@ -32,13 +32,19 @@ const VideoContainer = ({ match }) => {
               {!!data['video_url'] && (
                   <Video videoUrl={data['video_url']} />
               )}
-              {!!data.steps.length && data.steps.map((step, index) => (
-                      <>
-                          <h4>Step {index + 1}</h4>
-                          <p>{step}</p>
-                      </>
-                  ))
-              }
+                {!!data.instructions.length && data.instructions.map((step, index) => (
+                        <div key={index}>
+                            <h3>Step {index + 1}</h3>
+                            <p>{step.summary}</p>
+                            {!!step.steps.length && step.steps.map((part, index) => (
+                                <div key={index}>
+                                    <h4>Part {index + 1}</h4>
+                                    <p>{part.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))
+                }
               <h2>Resource Requirements: {data['resource_requirement'].toString()}</h2>
               <Link to="/">Back to homepage</Link>
             </>

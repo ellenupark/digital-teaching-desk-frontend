@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 const SearchForm = () => {
     const [complexity, setComplexity] = useState('')
     const [resource, setResource] = useState([])
-    const [groupSize, setGroupSize] = useState('')
+    const [minGroupSize, setMinGroupSize] = useState('')
+    const [maxGroupSize, setMaxGroupSize] = useState('')
     const [ageRange, setAgeRange] = useState([])
 
     const handleSubmit = (event) => {
@@ -35,7 +37,7 @@ const SearchForm = () => {
                 </Form.Control>
             </Form.Group>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                <Form.Label>Resource Requirements</Form.Label>
+                <Form.Label>Resource Requirements</Form.Label><br />
                     <Form.Check 
                         onChange={(event) => handleCheckBoxChange(event, setResource, resource)}
                         custom
@@ -74,61 +76,83 @@ const SearchForm = () => {
                     />
             </Form.Group>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                <Form.Label>Group Size</Form.Label>
-                <Form.Control  onChange={(event) => handleChange(event, setGroupSize)} as="select" size="sm" custom>
-                    <option>1 to 2</option>
-                    <option>3 to 4</option>
-                    <option>5 or more</option>
+                <Form.Label>Minimum Group Size</Form.Label>
+                <Form.Control  onChange={(event) => handleChange(event, setMinGroupSize)} as="select" size="sm" custom>
+                    <option>Any</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </Form.Control>
+                <Form.Label>Maximum Group Size</Form.Label>
+                <Form.Control  onChange={(event) => handleChange(event, setMaxGroupSize)} as="select" size="sm" custom>
+                    <option>Any</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
                 </Form.Control>
             </Form.Group>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                <Form.Label>Age Range</Form.Label>
+                <Form.Label>Recommended Age</Form.Label><br />
                     <Form.Check 
                         onChange={(event) => handleCheckBoxChange(event, setAgeRange, ageRange)}
                         custom
                         inline
-                        label="K-1"
+                        label="1-3"
                         type='checkbox'
                         id={`custom-inline-checkbox-1`}
-                        name='K-1'
+                        name='1-3'
                     />
                     <Form.Check
                         onChange={(event) => handleCheckBoxChange(event, setAgeRange, ageRange)}
                         custom
                         inline
-                        label="K-2"
+                        label="3-5"
                         type='checkbox'
                         id={`custom-inline-checkbox-2`}
-                        name='K-2'
+                        name='3-5'
                     />
                     <Form.Check
                         onChange={(event) => handleCheckBoxChange(event, setAgeRange, ageRange)}
                         custom
                         inline
-                        label="K-3"
+                        label="5-8"
                         type='checkbox'
                         id={`custom-inline-checkbox-3`}
-                        name='K-3'
+                        name='5-8'
                     />
                     <Form.Check
                         onChange={(event) => handleCheckBoxChange(event, setAgeRange, ageRange)}
                         custom
                         inline
-                        label="K-4"
+                        label="9-12"
                         type='checkbox'
                         id={`custom-inline-checkbox-4`}
-                        name="K-4"
+                        name="9-12"
                     />
                     <Form.Check
                         onChange={(event) => handleCheckBoxChange(event, setAgeRange, ageRange)}
                         custom
                         inline
-                        label="K-5"
+                        label="13 and over"
                         type='checkbox'
                         id={`custom-inline-checkbox-5`}
-                        name="K-5"
+                        name="13 and over"
                     />
             </Form.Group>
+            <Button variant="primary" size="lg">Submit</Button>{' '}
+            <Button variant="secondary" size="lg">Clear</Button>
         </Form>
         // <form onSubmit={(event) => this.handleSubmit(event)}>
         //     <label>Complexity Level</label>
