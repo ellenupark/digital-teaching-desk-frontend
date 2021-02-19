@@ -32,11 +32,11 @@ const SearchForm = (props) => {
 
     const handleCheckBoxChange = (event, setState, currentState, filterItem) => {
         let attribute = event.target.name
-        // event.target.checked ? attribute = event.target.name : attribute = "";
         let allAttributes = currentState.includes(attribute) ? currentState.filter(data => data !== attribute) : [...currentState, attribute]
+        
         filterItem === 'resource' && props.filterData(complexity, minGroupSize, maxGroupSize, allAttributes, ageRange)
         filterItem === 'age' && props.filterData(complexity, minGroupSize, maxGroupSize, resource, allAttributes)
-        // props.filterData(attribute, filterItem)
+
         currentState.includes(attribute) ? setState(currentState.filter(data => data !== attribute)) : setState([...currentState, attribute])
     }
 

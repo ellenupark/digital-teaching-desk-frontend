@@ -8,6 +8,7 @@ const SearchList = (props) => {
                     return (
                         <h5 key={index}>
                             <Link to={`/${item.media_type}s/${item.id}`}>{item.title}</Link>
+                            <p>Min: {item.min_group_size} Max: {item.max_group_size}</p>
                         </h5>
                     );
             })}

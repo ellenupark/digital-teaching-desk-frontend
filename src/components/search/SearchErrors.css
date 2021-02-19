@@ -1,0 +1,13 @@
+.error-display {
+    display: flex;
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 208, 208);
+    margin-top: 5px;
+}
+
+.error-display p {
+    margin: 2px;
+    padding: 5px;
+}
