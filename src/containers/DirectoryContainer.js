@@ -34,64 +34,6 @@ const DirectoryContainer = () => {
             let ageFilter = age.every(a => age.length > 0 ? content.age_range.includes(a) : a)
             return complexityFilter && minGroupFilter && maxGroupFilter && resourceFilter && ageFilter;
         }))
-        
-
-        // let newData;
-        // if (!!complexity && complexity !== 'Any') {
-        //     newData = data.filter(content => content.complexity_level === complexity)
-        // } else if (complexity === 'Any') {
-        //     newData = data
-        // }
-        // if (!!minGroup && minGroup !== 'Any') {
-        //     if (newData !== undefined) {
-        //         newData = newData.filter(content => {
-        //             if (content.min_group_size === 'Any') {
-        //                 return content
-        //             } else {
-        //                 return parseInt(content.min_group_size) >= parseInt(minGroup)
-        //             }
-        //         })
-        //     } else {
-        //         newData = data.filter(content => {
-        //             if (content.min_group_size === 'Any') {
-        //                 return content
-        //             } else {
-        //                 return parseInt(content.min_group_size) >= parseInt(minGroup)
-        //             }
-        //         })
-        //     }
-        // } else if (minGroup === 'Any') {
-        //     newData = data
-        // }
-        // if (!!maxGroup && maxGroup !== 'Any') {
-        //     if (newData !== undefined) {
-        //         newData = newData.filter(content => {
-        //             if (content.max_group_size === 'Any') {
-        //                 return content
-        //             } else {
-        //                 return parseInt(content.max_group_size) <= parseInt(maxGroup)
-        //             }
-        //         })
-        //     } else {
-        //         newData = data.filter(content => {
-        //             if (content.max_group_size === 'Any') {
-        //                 return content
-        //             } else {
-        //                 return parseInt(content.maxGroup) <= parseInt(maxGroup)
-        //             }
-        //         })
-        //     }
-        // } else if (maxGroup === 'Any') {
-        //     newData = data
-        // }
-
-        // if (resource.length > 0) {
-        //     newData !== undefined ? newData = newData.filter(content => resource.every(r=> content.resource_requirement.includes(r))) : newData = data.filter(content => resource.every(r=> content.resource_requirement.includes(r)))
-        // }
-        // if (age.length > 0) {
-        //     newData !== undefined ? newData = newData.filter(content => age.every(r=> content.age_range.includes(r))) : newData = data.filter(content => age.every(r=> content.age_range.includes(r)))
-        // }
-        // newData !== undefined ? setSearchData(newData) : setSearchData(data)
     }
 
     return (

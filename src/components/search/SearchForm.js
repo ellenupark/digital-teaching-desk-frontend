@@ -9,13 +9,6 @@ const SearchForm = (props) => {
     const [maxGroupSize, setMaxGroupSize] = useState('')
     const [ageRange, setAgeRange] = useState([])
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-  
-        // this.props.submitForm(this.state)
-        // this.setState({itemName: ""})
-    }
-
     const handleChange = (event, update, filterItem) => {
         let attribute = event.target.value
         filterItem === 'complexity' && props.filterData(attribute, minGroupSize, maxGroupSize, resource, ageRange)
@@ -23,12 +16,6 @@ const SearchForm = (props) => {
         filterItem === 'max-group-size' && props.filterData(complexity, minGroupSize, attribute, resource, ageRange)
         update(attribute)
     }
-  
-    // const handleChange = (event, update, filterItem) => {
-    //     let attribute = event.target.value
-    //     props.filterData(attribute, filterItem)
-    //     update(attribute)
-    // }
 
     const handleCheckBoxChange = (event, setState, currentState, filterItem) => {
         let attribute = event.target.name
@@ -40,8 +27,18 @@ const SearchForm = (props) => {
         currentState.includes(attribute) ? setState(currentState.filter(data => data !== attribute)) : setState([...currentState, attribute])
     }
 
+    const clearFormInputs = () => {
+        document.getElementById("search-form").reset();
+        setComplexity('');
+        setResource([]);
+        setMinGroupSize('');
+        setMaxGroupSize('');
+        setAgeRange([]);
+        props.filterData('', '', '', [], [])
+    }
+
     return (
-        <Form>
+        <Form id="search-form">
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
                 <Form.Label>Complexity Level</Form.Label>
                 <Form.Control onChange={(event) => handleChange(event, setComplexity, 'complexity')} as="select" size="sm" custom>
@@ -168,27 +165,8 @@ const SearchForm = (props) => {
                         name="13 and over"
                     />
             </Form.Group>
-            <Button type="submit" variant="primary" size="lg">Submit</Button>{' '}
-            <Button variant="secondary" size="lg">Clear</Button>
+            <Button onClick={clearFormInputs} variant="secondary" size="lg">Clear</Button>
         </Form>
-        // <form onSubmit={(event) => this.handleSubmit(event)}>
-        //     <label>Complexity Level</label>
-        //     <input type="text" onChange={(event) => handleChange(event, setComplexity)} value={complexity} name="complexity"/><br />
-        //     <label>Resource Requirement</label>
-        //     <input type="text" onChange={(event) => handleChange(event, setResource)} value={resource} name="resource"/><br />
-        //     <label>Group Size</label>
-        //     <input type="text" onChange={(event) => handleChange(event, setGroupSize)} value={groupSize} name="groupSize"/><br />
-        //     <label>Age Range</label>
-        //     <select id="cars" name="cars" size="4" multiple>
-        //         <option value="volvo">Volvo</option>
-        //         <option value="saab">Saab</option>
-        //         <option value="fiat">Fiat</option>
-        //         <option value="audi">Audi</option>
-        //     </select>
-        //     <input type="text" onChange={(event) => handleChange(event, setAgeRange)} value={ageRange} name="ageRange"/><br />
-        //     <input type="submit"/>
-        // </form>
-
     );
 };
 
