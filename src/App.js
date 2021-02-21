@@ -9,12 +9,14 @@ import HomePage from './containers/HomePage'
 import DirectoryContainer from './containers/DirectoryContainer'
 import ArticleContainer from './containers/ArticleContainer'
 import VideoContainer from './containers/VideoContainer'
+import NavBar from './components/NavBar'
 
 
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <Route path='/' component={NavBar} />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/directory' component={DirectoryContainer} />

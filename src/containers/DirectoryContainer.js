@@ -26,7 +26,7 @@ const DirectoryContainer = () => {
 
     function filterData(complexity, minGroup, maxGroup, resource, age) {
         errors.length > 0 && setErrors([])
-        parseInt(minGroup) > parseInt(maxGroup) ? setErrors(['Maximum group size must be larger than minimum group size.']) : setSearchData(data.filter(content => {
+        parseInt(minGroup) > parseInt(maxGroup) ? setErrors(['Maximum group size must be larger than the minimum group size.']) : setSearchData(data.filter(content => {
             let complexityFilter = content.complexity_level === complexity || content.complexity_level === 'Any' || complexity === 'Any' || complexity === ""
             let minGroupFilter = parseInt(content.min_group_size) <= parseInt(minGroup) || content.min_group_size === 'Any' || minGroup === "" || minGroup === 'Any'
             let maxGroupFilter = parseInt(content.max_group_size) <= parseInt(maxGroup) || content.max_group_size === 'Any' || maxGroup === "" || maxGroup === 'Any'

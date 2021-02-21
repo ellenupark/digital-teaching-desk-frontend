@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import BackgroundImg from '../images/bg-6.png'
+import BackgroundImg from '../images/vector-creator.png'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import './HomePage.css'
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -23,14 +23,7 @@ const HomePage = () => {
     <Container fluid="md">
         <Row>
             <Col>
-                {!isLoading &&
-                    data.map((item, index) => {
-                    return (
-                        <h5 key={index}>
-                            <Link to={`/${item.media_type}s/${item.id}`}>{item.title}</Link>
-                        </h5>
-                    );
-                })}
+                <h2>A Digital Library of Teaching Resources</h2>
             </Col>
             <Col>
                 <img src={BackgroundImg} alt='Work Desk' />
