@@ -1,12 +1,20 @@
-.col {
-    border: 1px solid red;
+.home-page h2 {
+    font-size: 300%;
+    text-align: center;
+    padding: 10px;
+    max-width: 50%;
 }
 
-.row {
-    margin: 0 auto !important;
+
+.home-page {
+    background-image: url('../images/vector-creator.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgb(245, 230, 165);
+    color: #FFF;
+    height: 92vh;
 }
 
-.container-md {
-    margin: 0!important;
-    padding: 0 !important;
-}

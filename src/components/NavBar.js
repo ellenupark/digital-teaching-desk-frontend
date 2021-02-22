@@ -10,13 +10,13 @@ import Button from 'react-bootstrap/Button';
 
 const NavBar = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar bg="light" variant="light" expand="lg">
             <Navbar.Brand href="/">Digital Teaching Desk</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/directory">Directory</Nav.Link>
+                    <Nav.Link href="/browse">Browse</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -25,10 +25,7 @@ const NavBar = () => {
                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                {/* <Form inline>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Button variant="outline-success">Search</Button>
-                </Form> */}
+                <a href="/directory"><Button variant="outline-success">Advanced Search</Button></a>
             </Navbar.Collapse>
         </Navbar>
     );

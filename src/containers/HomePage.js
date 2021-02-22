@@ -20,16 +20,9 @@ const HomePage = () => {
     }, []);
 
   return (
-    <Container fluid="md">
-        <Row>
-            <Col>
-                <h2>A Digital Library of Teaching Resources</h2>
-            </Col>
-            <Col>
-                <img src={BackgroundImg} alt='Work Desk' />
-            </Col>
-        </Row>
-    </Container>
+    <div className='home-page'>
+        <h2>Online Collection of Teaching Resources</h2>
+    </div>
   );
 };
 

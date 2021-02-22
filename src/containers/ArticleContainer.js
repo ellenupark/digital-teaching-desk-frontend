@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Video from '../components/Video';
+import './ArticleContainer.css'
 
 const ArticleContainer = ({ match }) => {
     const {
@@ -23,31 +24,31 @@ const ArticleContainer = ({ match }) => {
     return (
       <>
         {!isLoading && (
-          <>
-            <h1>Title: {data.title}</h1>
-            <h2>Description: {data.description}</h2>
+          <div className='article-page'>
+            <h1>{data.title}</h1>
             {!!data['image_url'] && (
                 <img src={data['image_url']} alt="Lesson" />
             )}
             {!!data['video_url'] && (
-                  <Video videoUrl={data['video_url']} />
+                <Video videoUrl={data['video_url']} />
             )}
-            {!!data.instructions.length && data.instructions.map((step, index) => (
-                    <div key={index}>
+            <p className='description'>{data.description}</p>
+            {!!data.instructions.length && React.Children.toArray(data.instructions.map((step, index) => (
+                    <>
                         <h3>Step {index + 1}</h3>
                         <p>{step.summary}</p>
-                        {!!step.steps.length && step.steps.map((part, index) => (
-                            <div key={index}>
+                        {!!step.steps.length && React.Children.toArray(step.steps.map((part, index) => (
+                            <>
                                 <h4>Part {index + 1}</h4>
                                 <p>{part.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                ))
+                            </>
+                        )))}
+                    </>
+                )))
             }
             <h2>Resource Requirements: {data['resource_requirement'].join(', ')}</h2>
             <Link to="/">Back to homepage</Link>
-          </>
+          </div>
         )}
       </>
     );
