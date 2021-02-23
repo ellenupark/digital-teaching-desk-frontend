@@ -1,0 +1,34 @@
+.featured-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.content-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 45px;
+    width: 40%;
+}
+
+.featured-image {
+    width: 60%;
+    height: 80%;
+    padding-right: 45px;
+}
+
+.featured-image:hover, .content-text:hover {
+    cursor: pointer;
+}
+
+.content-text h3:hover {
+    text-decoration: underline;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

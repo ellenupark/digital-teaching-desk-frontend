@@ -1,0 +1,10 @@
+.explore-container {
+    background-color: #FAFAFA;
+    height: 100vh;
+}
+
+.featured-header {
+    border-bottom: 2px solid #000000;
+    margin: 0 45px;
+    padding-top: 25px;
+}

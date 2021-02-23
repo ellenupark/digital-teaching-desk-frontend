@@ -11,7 +11,7 @@ import ArticleContainer from './containers/ArticleContainer'
 import VideoContainer from './containers/VideoContainer'
 import NavBar from './components/NavBar'
 import AboutContainer from './containers/about/AboutContainer'
-import BrowseContainer from './containers/browse/BrowseContainer'
+import ExploreContainer from './containers/explore/ExploreContainer'
 
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/about' component={AboutContainer} />
-          <Route exact path='/browse' component={BrowseContainer} />
+          <Route exact path='/explore' component={ExploreContainer} />
           <Route exact path='/directory' component={DirectoryContainer} />
           <Route exact path='/articles/:articleId' component={ArticleContainer} />
           <Route exact path='/videos/:videoId' component={VideoContainer} />
