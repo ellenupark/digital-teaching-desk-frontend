@@ -1,0 +1,29 @@
+.search-list-item img {
+    width: 100%;
+    min-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.search-list-item p {
+    white-space: normal;
+    font-weight: bold;
+    min-width: 300px;
+
+}
+
+.search-list-item {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 15px;
+}
+
+.search-list-item img:hover, .search-list-item p:hover {
+    cursor: pointer;
+}
+
+.search-list-item p:hover {
+    text-decoration: underline;
+}

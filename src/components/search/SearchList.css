@@ -1,7 +1,7 @@
 h3 {
     border-bottom: 1px solid black;
     width: 100%;
-    margin-left: 35px;
+    margin: 0 35px;
 }
 
 .search-list-container {
@@ -12,6 +12,8 @@ h3 {
 .search-list-items {
     border-left: 1px solid rgb(182, 182, 182);
     margin: 35px 0 0 0;
-    padding: 10px;
-
+    padding: 0 0 0 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
