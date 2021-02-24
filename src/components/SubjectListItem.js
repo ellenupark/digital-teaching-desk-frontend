@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 
-const FeaturedListItem = (props) => {
+const SubjectListItem = (props) => {
     const history = useHistory();
 
     const routeChange = () => { 
@@ -17,4 +17,4 @@ const FeaturedListItem = (props) => {
     );
 };
 
-export default FeaturedListItem;
+export default SubjectListItem;

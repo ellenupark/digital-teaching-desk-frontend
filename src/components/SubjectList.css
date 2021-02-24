@@ -1,4 +1,4 @@
-.list-item {
+.subject-list-item {
     overflow: auto;
     white-space: nowrap;
     display: flex;
@@ -6,11 +6,11 @@
     flex-wrap: nowrap;
 }
 
-.list-item img:hover {
+.subject-list-item img:hover {
     cursor: pointer;
 }
 
-.list-item img {
+.subject-list-item img {
     max-width: 200px;
 }
 
