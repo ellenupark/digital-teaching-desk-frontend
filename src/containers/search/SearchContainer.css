@@ -1,4 +1,12 @@
-#search-container {
+.search-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 45px;
+
+}
+/* #search-container {
     margin: 0 auto;
     border: 1px solid red;
     width: 100vw;
@@ -6,13 +14,13 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 25px auto;
 }
 
 #search-form {
     height: 92vh;
     border: 1px solid blue;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     min-width: 400px;
 }
@@ -23,4 +31,4 @@
 
 #search-list {
     min-width: 400px;
-}
+} */

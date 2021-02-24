@@ -40,17 +40,11 @@ const SearchContainer = () => {
     return (
         <>
             {!isLoading &&
-                <Container fluid="md" id='search-container'>
-                    <Row>
-                        <Col id='search-form'>
-                            <SearchForm filterData={filterData}/>
-                            {errors.length > 0 && <SearchErrors errors={errors} />}
-                        </Col>
-                        <Col id='search-list'>
-                            <SearchList content={searchData} />
-                        </Col>
-                    </Row>
-                </Container> 
+                <div className='search-container'>
+                        <SearchForm filterData={filterData}/>
+                        {errors.length > 0 && <SearchErrors errors={errors} />}
+                        <SearchList content={searchData} />
+                </div> 
             }
         </>
     );

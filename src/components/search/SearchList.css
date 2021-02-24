@@ -1,0 +1,17 @@
+h3 {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-left: 35px;
+}
+
+.search-list-container {
+    width: 65%;
+    min-width: 300px;
+}
+
+.search-list-items {
+    border-left: 1px solid rgb(182, 182, 182);
+    margin: 35px 0 0 0;
+    padding: 10px;
+
+}
