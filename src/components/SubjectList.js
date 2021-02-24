@@ -8,57 +8,25 @@ const SubjectList = (props) => {
             <h2>Natural World</h2>
             <div className="subject-list-item" >
                 {React.Children.toArray(
-                    props.contents.map(content => {
-                        if (content.subject.includes('Natural World')) {
-                            return (
-                                <SubjectListItem content={content} />
-                            )
-                        } else {
-                            return <nil />
-                        }
-                    })
+                    props.contents.map(content => content.subject.includes('Natural World') ? <SubjectListItem content={content} /> : null)
                 )}
             </div>
             <h2>Puzzles</h2>
             <div className="subject-list-item" >
                 {React.Children.toArray(
-                    props.contents.map(content => {
-                        if (content.subject.includes('Puzzles')) {
-                            return (
-                                <SubjectListItem content={content} />
-                            )
-                        } else {
-                            return <nil />
-                        }
-                    })
+                    props.contents.map(content => content.subject.includes('Puzzles') ? <SubjectListItem content={content} /> : null)
                 )}
             </div>  
             <h2>Break Time</h2>
             <div className="subject-list-item" >
                 {React.Children.toArray(
-                    props.contents.map(content => {
-                        if (content.subject.includes('Break Time')) {
-                            return (
-                                <SubjectListItem content={content} />
-                            )
-                        } else {
-                            return <nil />
-                        }
-                    })
+                    props.contents.map(content => content.subject.includes('Break Time') ? <SubjectListItem content={content} /> : null)
                 )}
             </div>
             <h2>Coding</h2>
             <div className="subject-list-item" >
                 {React.Children.toArray(
-                    props.contents.map(content => {
-                        if (content.subject.includes('Coding')) {
-                            return (
-                                <SubjectListItem content={content} />
-                            )
-                        } else {
-                            return <nil />
-                        }
-                    })
+                    props.contents.map(content => content.subject.includes('Coding') ? <SubjectListItem content={content} /> : null)
                 )}
             </div>
         
