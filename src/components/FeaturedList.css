@@ -1,0 +1,43 @@
+.list-item {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.list-item img:hover {
+    cursor: pointer;
+}
+
+.list-item img {
+    max-width: 200px;
+}
+
+.explore-list-item {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 45px;
+}
+
+.explore-list-item p {
+    white-space: normal;
+}
+
+
+.explore-list h2 {
+    margin: 0 45px;
+    border-bottom: 1px solid black;
+}
+
+.explore-list p {
+    font-weight: bold;
+    line-height: normal;
+}
+
+.explore-list p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
