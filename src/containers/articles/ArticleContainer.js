@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Video from '../components/Video';
+import Video from '../../components/Video';
 import './ArticleContainer.css'
 
 const ArticleContainer = ({ match }) => {

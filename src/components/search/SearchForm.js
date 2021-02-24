@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import './SearchForm.css'
 
 const SearchForm = (props) => {
     const [complexity, setComplexity] = useState('')
@@ -102,6 +103,8 @@ const SearchForm = (props) => {
                     <option>9</option>
                     <option>10</option>
                 </Form.Control>
+            </Form.Group>
+            <Form.Group>
                 <Form.Label>Maximum Group Size</Form.Label>
                 <Form.Control  onChange={(event) => handleChange(event, setMaxGroupSize, 'max-group-size')} as="select" size="sm" custom>
                     <option>Any</option>

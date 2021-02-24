@@ -1,0 +1,26 @@
+#search-container {
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#search-form {
+    height: 92vh;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 400px;
+}
+
+#search-form button {
+    max-width: 150px;
+}
+
+#search-list {
+    min-width: 400px;
+}
