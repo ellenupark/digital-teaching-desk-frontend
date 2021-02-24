@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import SearchForm from '../../components/search/SearchForm'
 import SearchList from '../../components/search/SearchList'
 import SearchErrors from '../../components/search/SearchErrors'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import './SearchContainer.css'
 
 const SearchContainer = () => {
