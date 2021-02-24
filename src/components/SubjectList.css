@@ -12,6 +12,7 @@
 
 .subject-list-item img {
     max-width: 200px;
+    border-radius: 5px;
 }
 
 .explore-list-item {
