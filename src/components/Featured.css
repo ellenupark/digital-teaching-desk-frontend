@@ -1,7 +1,7 @@
 .featured-container {
     display: flex;
     align-items: center;
-    min-height: 82vh;
+    min-height: 90vh;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 45px 15px 45px;

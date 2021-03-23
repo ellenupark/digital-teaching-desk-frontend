@@ -10,7 +10,6 @@
     align-items: center;
 }
 
-h2 {
+.about-container h2 {
     text-align: center;
-    border: 1px solid aquamarine
 }
