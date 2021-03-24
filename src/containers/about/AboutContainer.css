@@ -13,3 +13,19 @@
 .about-container h2 {
     text-align: center;
 }
+
+.about-cover {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../images/clip-girl-drawing.png");
+    background-position: center 0em;
+    background-repeat: no-repeat;
+    background-size: 50em
+}
+
+.about-cover h2 {
+    font-size: 5em;
+    font-weight: bold;
+    width: 100%;
+    color: #FFFFFF;
+}

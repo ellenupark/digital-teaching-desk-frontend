@@ -4,8 +4,9 @@ import './AboutContainer.css'
 const AboutContainer = () => {
     return (
         <div className="about-container">
-            <div>
-                <h2>What is Digital Teaching Desk?</h2>
+            <div className="about-cover">
+                <h2>About</h2>
+                <h2>Digital Teaching Desk</h2>
             </div>
             <div>
                 <h2>Get Started</h2>
