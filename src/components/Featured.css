@@ -8,20 +8,13 @@
 }
 
 .content-text {
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
-    /* padding: 0 45px; */
     width: 50%;
     min-width: 300px;
 }
 
 .featured-image {
-    /* padding-right: 45px; */
     width: 50%;
     min-width: 300px;
-
-    /* width: 50vw; */
 }
 
 .featured-image:hover, .content-text:hover {
