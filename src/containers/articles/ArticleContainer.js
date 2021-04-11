@@ -24,31 +24,38 @@ const ArticleContainer = ({ match }) => {
     return (
       <>
         {!isLoading && (
-          <div className='article-page'>
-            <h1>{data.title}</h1>
-            {!!data['image_url'] && (
-                <img src={data['image_url']} alt="Lesson" />
-            )}
-            {!!data['video_url'] && (
-                <Video videoUrl={data['video_url']} />
-            )}
-            <p className='description'>{data.description}</p>
-            {!!data.instructions.length && React.Children.toArray(data.instructions.map((step, index) => (
-                    <>
-                        <h3>Step {index + 1}</h3>
-                        <p>{step.summary}</p>
-                        {!!step.steps.length && React.Children.toArray(step.steps.map((part, index) => (
-                            <>
-                                <h4>Part {index + 1}</h4>
-                                <p>{part.description}</p>
-                            </>
-                        )))}
-                    </>
-                )))
-            }
-            <h2>Resource Requirements: {data['resource_requirement'].join(', ')}</h2>
-            <Link to="/">Back to homepage</Link>
-          </div>
+          <>
+            <div className='article-page'>
+              <div className='article-body'>
+                <h1>{data.title}</h1>
+                {!!data['image_url'] && (
+                    <img src={data['image_url']} alt="Lesson" />
+                )}
+                {!!data['video_url'] && (
+                    <Video videoUrl={data['video_url']} />
+                )}
+                <p className='description'>{data.description}</p>
+                {!!data.instructions.length && React.Children.toArray(data.instructions.map((step, index) => (
+                        <>
+                            <h3>Step {index + 1}</h3>
+                            <p>{step.summary}</p>
+                            {!!step.steps.length && React.Children.toArray(step.steps.map((part, index) => (
+                                <>
+                                    <h4>Part {index + 1}</h4>
+                                    <p>{part.description}</p>
+                                </>
+                            )))}
+                        </>
+                    )))
+                }
+                <h2>Resource Requirements: {data['resource_requirement'].join(', ')}</h2>
+                <Link to="/">Back to homepage</Link>
+              </div>
+              <div className='details'>
+                <h2>Hello</h2>
+              </div>
+            </div>
+          </>
         )}
       </>
     );
