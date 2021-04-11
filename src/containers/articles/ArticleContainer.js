@@ -56,7 +56,12 @@ const ArticleContainer = ({ match }) => {
                 <Link to="/">Back to homepage</Link>
               </div>
               <div className='details'>
-                <h2>Hello</h2>
+                <div className='details-box'>
+                  <p><span>Difficulty:</span> {data['complexity_level']}</p>
+                  <p><span>Resource Requirement:</span> {data['resource_requirement'].map((val, idx, arr) => idx === arr.length - 1 ? `${val}` : `${val}, `)}</p>
+                  <p><span>Group Size:</span> {`${data['min_group_size']} to ${data['max_group_size']}`}</p>
+                  <p><span>Recommended Age:</span> {data['age_range'].map((val, idx, arr) => idx === arr.length - 1 ? `${val}` : `${val}, `)}</p>
+                </div>
               </div>
             </div>
           </>
