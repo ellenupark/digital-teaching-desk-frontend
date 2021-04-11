@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Video from '../../components/Video';
 import './ArticleContainer.css'
 
@@ -52,8 +51,6 @@ const ArticleContainer = ({ match }) => {
                         </>
                     )))
                 }
-                <h2>Resource Requirements: {data['resource_requirement'].join(', ')}</h2>
-                <Link to="/">Back to homepage</Link>
               </div>
               <div className='details'>
                 <div className='details-box'>
