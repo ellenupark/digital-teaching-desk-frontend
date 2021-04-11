@@ -26,3 +26,13 @@
 .details {
     flex-basis: 30%;
 }
+
+.article-part {
+    border-left: 1px solid lightgrey;
+    margin-left: 40px;
+    padding-left: 30px;
+}
+
+.article-step {
+    margin: 40px 0 30px 0;
+}

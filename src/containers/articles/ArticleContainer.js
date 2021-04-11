@@ -37,14 +37,18 @@ const ArticleContainer = ({ match }) => {
                 <p className='description'>{data.description}</p>
                 {!!data.instructions.length && React.Children.toArray(data.instructions.map((step, index) => (
                         <>
+                          <div className="article-step">
                             <h3>Step {index + 1}</h3>
                             <p>{step.summary}</p>
+                          </div>
+                          <div className="article-part">
                             {!!step.steps.length && React.Children.toArray(step.steps.map((part, index) => (
-                                <>
-                                    <h4>Part {index + 1}</h4>
-                                    <p>{part.description}</p>
-                                </>
+                              <>
+                                <h4>Part {index + 1}</h4>
+                                <p>{part.description}</p>
+                              </>
                             )))}
+                          </div>
                         </>
                     )))
                 }
